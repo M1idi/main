@@ -6,6 +6,3 @@ def test_main():
 
 def test_main_1():
     assert main(3, 3) == 6
-
-
-def test_main_3()

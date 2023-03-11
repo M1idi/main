@@ -1,0 +1,19 @@
+repos:
+  - repo: 'https://github.com/pre-commit/pre-commit-hooks'
+    rev: v2.4.0
+    hooks:
+      # проверяет наличие переноса строки в конце всех текстовых файлов
+      - id: end-of-file-fixer
+      # предупреждает о добавлении больших файлов в Git
+      - id: check-added-large-files
+      # предупреждает о сохранении файлов с UTF-8 BOM
+      - id: check-byte-order-marker
+  - repo: local
+    hooks:
+        - id: pytest
+          name: pytest
+          entry: pytest
+          language: system
+          always_run: true
+          verbose: true
+          pass_filenames: false
